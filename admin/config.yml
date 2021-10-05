@@ -1,13 +1,13 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
-  
+
 media_folder: 'assets/uploads'
 site_url: https://wks-feed.netlify.app/
 
 collections:
   - name: 'feed'
-    label: 'Will K's Feed'
+    label: 'Will K’s Feed'
     folder: '_posts/'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -29,10 +29,7 @@ collections:
         file: '_data/settings.yml'
         fields:
           - { label: 'Site Title (for browser tab)', name: 'site_title', widget: 'string' }
-          - label: 'Favicon'
-            name: 'favicon'
-            widget: 'image'
-            required: false
+          - { label: 'Favicon', name: 'favicon', widget: 'image', required: false }
           - { label: 'Header Bio', name: 'header_bio', widget: 'markdown' }
           - { label: 'Information', name: 'information', widget: 'markdown' }
           - { label: 'Footer', name: 'footer', widget: 'string' }
