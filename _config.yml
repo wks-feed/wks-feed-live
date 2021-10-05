@@ -2,7 +2,7 @@ url: "https://wks-feed.netlify.app/" # the base hostname & protocol for your sit
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "" # the name of your site, e.g. ACME Corp.
 
-# incremental: true
+incremental: true
 
 plugins: [jekyll-paginate-v2]
 

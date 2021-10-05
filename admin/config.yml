@@ -1,8 +1,10 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
+  
 media_folder: 'assets/uploads'
 site_url: https://wks-feed.netlify.app/
+
 collections:
   - name: 'feed'
     label: 'Will K's Feed'
