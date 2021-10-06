@@ -3,8 +3,8 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 media_folder: 'assets/uploads'
-#site_url: https://wks-feed.netlify.app/
-site_url: http://127.0.0.1:4000/
+site_url: https://wks-feed.netlify.app/
+#site_url: http://127.0.0.1:4000/
 
 collections:
   - name: 'feed'
