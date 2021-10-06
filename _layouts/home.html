@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% if paginator.page==1 %}
+  <div class="intro">
+    {{ site.data.settings.information | markdownify }}
+  </div>
+{% endif %}
+
+{% for post in paginator.posts %}
+  <a href="{{ post.url }}" class="dot"></a>
+  <div class="post">
+    {% if post.header %}
+      <h1>{{ post.header }}</h1>
+    {% endif %}
+    {{ post.content | markdownify }}
+  </div>
+{% endfor %}

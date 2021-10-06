@@ -1,0 +1,14 @@
+<div class="pagination">
+    <span class="label">page:</span>
+    {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+            {% if page != 1 %}<span class="comma">,</span>{% endif %}
+            <span class="num">{{ page }}</span>
+        {% elsif page == 1 %}
+            <a class="num" href="{{ '/' | relative_url }}">{{ page }}</a>
+        {% else %}
+            <span class="comma">,</span> 
+            <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+    {% endfor %}
+</div>

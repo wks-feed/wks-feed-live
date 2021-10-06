@@ -3,7 +3,8 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 media_folder: 'assets/uploads'
-site_url: https://wks-feed.netlify.app/
+#site_url: https://wks-feed.netlify.app/
+site_url: http://127.0.0.1:4000/
 
 collections:
   - name: 'feed'
@@ -16,6 +17,7 @@ collections:
     fields:
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
       - { label: 'Slug', name: 'title', widget: 'string' }
+      - { label: 'Header (optional)', name: 'post_header', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'settings'
@@ -32,4 +34,3 @@ collections:
           - { label: 'Favicon', name: 'favicon', widget: 'image', required: false }
           - { label: 'Header Bio', name: 'header_bio', widget: 'markdown' }
           - { label: 'Information', name: 'information', widget: 'markdown' }
-          - { label: 'Footer', name: 'footer', widget: 'string' }

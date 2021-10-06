@@ -1,8 +1,8 @@
 ---
-layout: default
-title: "Happy Jekylling!"
+layout: home
+title: "Home"
+pagination:
+  enabled: true
+  per_page: 2
+  permalink: '/page/:num/'
 ---
-
-## You're ready to go!
-
-Start developing your Jekyll website.

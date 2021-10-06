@@ -3,12 +3,27 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
+    <title>{{ site.data.settings.site_title }}</title>
+    <link rel="shortcut icon" href="{{ site.data.settings.favicon }}">
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    {{ content }}
+    <main>
+      {% if paginator.page==1 %}
+        <header>
+          {{ site.data.settings.header_bio | markdownify }}
+        </header>
+      {% endif %}
+      {{ content }}
+    </main>
+    {% if page.layout == "home" %}
+      {% if paginator.total_pages > 1 %}
+        {% include pagination.html %}
+      {% else %}
+        <div class="pagination">Page: 1</div>
+      {% endif %}
+    {% endif %}
     <!-- netlify cms login script -->
     <script>
       if (window.netlifyIdentity) {
