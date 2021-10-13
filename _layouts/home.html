@@ -10,8 +10,8 @@ layout: default
 {% for post in paginator.posts %}
   <a href="{{ post.url }}" class="dot"></a>
   <div class="post">
-    {% if page.post_header %}
-    <h1>{{ page.post_header }}</h1>
+    {% if post.post_header %}
+    <h1>{{ post.post_header }}</h1>
     {% endif %}
     {{ post.content | markdownify }}
   </div>
